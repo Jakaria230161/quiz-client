@@ -25,6 +25,7 @@ const NavBar = () => {
             <rect x="3" y="17" width="7" height="6" />
             <rect x="14" y="1" width="7" height="6" />
             <rect x="14" y="11" width="7" height="12" />
+            
           </svg>
           <span class="ml-2 text-4xl font-bold tracking-wide text-gray-800 uppercase">
             Quiz-Ace
@@ -60,7 +61,17 @@ const NavBar = () => {
             >
               Statistics
             </a>
-          </li>
+            </li>
+            <li>
+              <a
+              href="/"
+              aria-label="Quiz Blog"
+              title="Quiz Blog"
+              class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 text-3xl"
+            >
+              Blog
+            </a>
+            </li>
           <li>
             <a
               href="/"
