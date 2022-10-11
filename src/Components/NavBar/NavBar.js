@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,54 +34,54 @@ const NavBar = () => {
         </a>
         <ul class="flex items-center hidden space-x-8 lg:flex">
           <li>
-            <a
-              href="/"
+            <Link
+              to="/home"
               aria-label="Quiz Home"
               title="Quiz Home"
               class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 text-3xl"
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/topics"
+            <Link
+              to="/topics"
               aria-label="Quiz Topics"
               title="Quiz Topics"
               class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 text-3xl"
             >
               Topics
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/statistics"
+            <Link
+              to="/statistics"
               aria-label="Quiz Statistics"
               title="Quiz Statistics"
               class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 text-3xl"
             >
               Statistics
-            </a>
+            </Link>
             </li>
             <li>
-              <a
-              href="/blog"
+              <Link
+              to="/blog"
               aria-label="Quiz Blog"
               title="Quiz Blog"
               class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 text-3xl"
             >
               Blog
-            </a>
+            </Link>
             </li>
           <li>
-            <a
-              href="/about"
+            <Link
+              to="/about"
               aria-label="About"
               title="About"
               class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 text-3xl"
             >
               About
-            </a>
+            </Link>
           </li>
     
         </ul>
