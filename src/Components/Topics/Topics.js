@@ -1,9 +1,10 @@
 import React from 'react';
+import Home from '../Home/Home';
 
 const Topics = () => {
     return (
         <div>
-            <h1>Quiz topics</h1>
+            <Home></Home>
         </div>
     );
 };

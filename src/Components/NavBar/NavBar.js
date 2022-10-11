@@ -44,7 +44,7 @@ const NavBar = () => {
           </li>
           <li>
             <a
-              href="/"
+              href="/topics"
               aria-label="Quiz Topics"
               title="Quiz Topics"
               class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 text-3xl"
@@ -54,7 +54,7 @@ const NavBar = () => {
           </li>
           <li>
             <a
-              href="/"
+              href="/statistics"
               aria-label="Quiz Statistics"
               title="Quiz Statistics"
               class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 text-3xl"
@@ -64,7 +64,7 @@ const NavBar = () => {
             </li>
             <li>
               <a
-              href="/"
+              href="/blog"
               aria-label="Quiz Blog"
               title="Quiz Blog"
               class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 text-3xl"
@@ -74,7 +74,7 @@ const NavBar = () => {
             </li>
           <li>
             <a
-              href="/"
+              href="/about"
               aria-label="About"
               title="About"
               class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 text-3xl"
