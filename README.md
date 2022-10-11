@@ -1,4 +1,4 @@
-# Quiz-Ace Starter Repository
+# Quiz-Ace "Everyone loves sports. And everyone loves a quiz."
 
 This is an Amazing Quiz-Ace website, here will be Quiz some specific topics. "Everyone loves sport. And everyone loves a quiz."
 

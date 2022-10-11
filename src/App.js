@@ -1,10 +1,15 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Footer from './Components/Footer/Footer';
+import Header from './Components/Header/Header';
+import NavBar from './Components/NavBar/NavBar';
 
 function App() {
   return (
     <div className="App">
-      <h1>checked TailwindCSS</h1>
+      <NavBar></NavBar>
+      <Header></Header>
+      <Footer></Footer>
     </div>
   );
 }
