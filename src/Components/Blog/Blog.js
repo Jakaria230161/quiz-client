@@ -1,6 +1,9 @@
 import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const Blog = () => {
+    const notify = () => toast("Thank you so much!");
     return (
         <div>
             <section className="dark:bg-gray-800 dark:text-gray-100">
@@ -26,7 +29,9 @@ It can be used to access a DOM element directly. </p>
 			</details>
 		</div>
 	</div>
-</section>
+            </section>
+             <button onClick={notify}><span className='text-xl bg-blue-600 font-semibold text-white py-2 border rounded-lg px-4'>Click Me</span></button>
+        <ToastContainer />
         </div>
     );
 };

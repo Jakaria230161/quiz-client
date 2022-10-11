@@ -1,6 +1,9 @@
 import React from 'react';
+ import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const About = () => {
+      const notify = () => toast("Thank you so much for giving me your feedback!");
     return (
         <div className="flex flex-col my-10 justify-center align-center mx-10 w-xl p-8 shadow-sm border rounded-xl lg:p-12 dark:bg-gray-900 dark:text-gray-100">
 	<div className="flex flex-col items-center w-full">
@@ -37,12 +40,13 @@ const About = () => {
 		</div>
 		<div className="flex flex-col w-full">
 			<textarea rows="3" placeholder="Message..." className="p-4 border rounded-md resize-none dark:text-gray-100 dark:bg-gray-900"></textarea>
-			<button type="button" className="py-4 my-8 font-semibold border rounded-md dark:text-gray-900 text-3xl text-white bg-violet-400">Leave feedback</button>
+			<button onClick={notify} type="button" className="py-4 my-8 font-semibold border rounded-md dark:text-gray-900 text-3xl text-white bg-violet-400">Leave feedback</button>
 		</div>
 	</div>
 	<div className="flex items-center justify-center">
 		<a rel="noopener noreferrer" href="#" className="text-md font-semibold bg-lime-600 border rounded-lg py-2 px-8  text-white dark:text-gray-400">Maybe later</a>
-	</div>
+            </div>
+            <ToastContainer />
 </div>
     );
 };
