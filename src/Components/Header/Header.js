@@ -1,53 +1,151 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
     return (
-        <div className="relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0">
-      <div className="flex flex-col items-start w-full max-w-xl px-4 mx-auto lg:px-8 lg:max-w-screen-xl">
-        <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
-          <div className="max-w-xl mb-6">
-            <div>
-              <p className="inline-block px-3 py-px mb-4 text-sm font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-                New Quiz Show
-              </p>
+        <div>
+            <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
+                <div className='relative flex items-center justify-between'>
+                    <Link
+                        to='/'
+                        aria-label='Smart Home'
+                        title='Smart Home'
+                        className='inline-flex items-center'
+                    >
+                        <img className='w-20 h-20' src="https://previews.123rf.com/images/jovanas/jovanas1810/jovanas181000353/109413496-quiz-icon.jpg" alt="" />
+                        <span className='ml-2 text-2xl text-rose-600 font-bold tracking-wide uppercase'>
+                            Quiz Ace
+                        </span>
+                    </Link>
+                    <ul className='flex items-center hidden space-x-8 lg:flex'>
+                        <li>
+                            <Link
+                                to='/home'
+                                aria-label='Home'
+                                title='Home'
+                                className='font-medium text-2xl text-amber-600 tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400'
+                            >
+                                Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to='/statistics'
+                                aria-label='Statistics'
+                                title='Statistics'
+                                className='font-medium tracking-wide text-2xl text-amber-600 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                            >
+                                Statistics
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to='/blog'
+                                aria-label='Blog'
+                                title='Blog'
+                                className='font-medium tracking-wide text-2xl text-amber-600 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                            >
+
+                                <p> Blog</p>
+                            </Link>
+                        </li>
+
+                    </ul>
+                    <div className='lg:hidden'>
+                        <button
+                            aria-label='Open Menu'
+                            title='Open Menu'
+                            className='p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50'
+                            onClick={() => setIsMenuOpen(true)}
+                        >
+                            <svg className='w-5 text-gray-600' viewBox='0 0 24 24'>
+                                <path
+                                    fill='currentColor'
+                                    d='M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z'
+                                />
+                                <path
+                                    fill='currentColor'
+                                    d='M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z'
+                                />
+                                <path
+                                    fill='currentColor'
+                                    d='M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z'
+                                />
+                            </svg>
+                        </button>
+                        {isMenuOpen && (
+                            <div className='absolute top-0 left-0 w-full'>
+                                <div className='p-5 bg-white border rounded shadow-sm'>
+                                    <div className='flex items-center justify-between mb-4'>
+                                        <div>
+                                            <Link
+                                                to='/'
+                                                aria-label='Company'
+                                                title='Company'
+                                                className='inline-flex items-center'
+                                            >
+                                                <svg
+                                                    xmlns='http://www.w3.org/2000/svg'
+                                                    viewBox='0 0 32 32'
+                                                    fill='currentColor'
+                                                    className='flex-shrink-0 w-8 h-8 rounded-full text-gray-900'
+                                                >
+                                                    <path d='M18.266 26.068l7.839-7.854 4.469 4.479c1.859 1.859 1.859 4.875 0 6.734l-1.104 1.104c-1.859 1.865-4.875 1.865-6.734 0zM30.563 2.531l-1.109-1.104c-1.859-1.859-4.875-1.859-6.734 0l-6.719 6.734-6.734-6.734c-1.859-1.859-4.875-1.859-6.734 0l-1.104 1.104c-1.859 1.859-1.859 4.875 0 6.734l6.734 6.734-6.734 6.734c-1.859 1.859-1.859 4.875 0 6.734l1.104 1.104c1.859 1.859 4.875 1.859 6.734 0l21.307-21.307c1.859-1.859 1.859-4.875 0-6.734z'></path>
+                                                </svg>
+                                                <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
+                                                    Smart Home
+                                                </span>
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <button
+                                                aria-label='Close Menu'
+                                                title='Close Menu'
+                                                className='p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline'
+                                                onClick={() => setIsMenuOpen(false)}
+                                            >
+                                                <svg className='w-5 text-gray-600' viewBox='0 0 24 24'>
+                                                    <path
+                                                        fill='currentColor'
+                                                        d='M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z'
+                                                    />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <nav>
+                                        <ul className='space-y-4'>
+                                            <li>
+                                                <Link
+                                                    to='/statistics'
+                                                    aria-label='Statistics'
+                                                    title='Statistics'
+                                                    className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                                                >
+                                                    Statistics
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link
+                                                    to='/blog'
+                                                    aria-label='Blog'
+                                                    title='Blog'
+                                                    className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                                                >
+                                                    <p> Blog</p>
+                                                </Link>
+                                            </li>
+
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
             </div>
-            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-              I think what makes 'Jeopardy!' special is that, among all the quiz 
-              <br className="hidden md:block" />
-              {' '}
-              <span className="inline-block text-deep-purple-accent-400">
-                and game shows out there, ours tends to encourage learning.
-              </span>
-            </h2>
-            <p className="text-base text-gray-700 md:text-lg">
-              This is an Amazing Quiz-Ace website, here will be Quiz some specific topics. "Everyone loves sport. And everyone loves a quiz."
-            </p>
-          </div>
-          <div className="flex flex-col items-center md:flex-row">
-            <a
-              href="/"
-              className="inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-medium tracking-wide text-purple-700 bg-gray-50 text-xl transition duration-200 rounded shadow-md md:w-auto md:mr-4 md:mb-0 bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-            >
-              Apply Now
-            </a>
-            <a
-              href="/"
-              aria-label=""
-              className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700"
-            >
-              Learn more
-            </a>
-          </div>
         </div>
-      </div>
-      <div className="inset-y-0 right-0 w-full max-w-xl px-4 mx-auto lg:pl-8 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-1/2 lg:max-w-full lg:absolute xl:px-0">
-        <img
-          className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none sm:h-96 lg:h-full"
-          src="https://img.freepik.com/free-vector/thoughtful-woman-with-laptop-looking-big-question-mark_1150-39362.jpg?w=360&t=st=1665473046~exp=1665473646~hmac=ba7e32fe3ec14bd160739a71983ff3f5d80130dee6d7c094f32ef5295a7fd040"
-          alt=""
-        />
-      </div>
-    </div>
     );
 };
 

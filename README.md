@@ -1,14 +1,17 @@
-# Quiz-Ace "Everyone loves sports. And everyone loves a quiz."
+# Quiz Today Repository
 
-This is an Amazing Quiz-Ace website, here will be Quiz some specific topics. "Everyone loves sport. And everyone loves a quiz."
+I think what makes 'Jeopardy!' special is that, among all the quiz and game shows out there, ours tends to encourage learning.
+"Everyone loves sport. And everyone loves a quiz."
 
 
 ## Live Link
-Hosted in Netlify ->
+Hosted in Netlify -> [Quiz Ace](https://play-quiz-game-in-quiz-ace-react-web.netlify.app)
 
-## Context API
+## QUIZ API LINK
 
-Documentation Link -> [Link](https://reactjs.org/docs/context.html#api)
+Get all quiz topics Link -> [Link](https://openapi.programming-hero.com/api/quiz)
+Get topic details by topic id -> [Link](https://openapi.programming-hero.com/api/quiz/${id})
+Example -> [Link](https://openapi.programming-hero.com/api/quiz/1)
 
 ## React Router Dom v6.4 
 Documentation Link -> [Link](https://reactrouter.com/en/main/start/overview)
@@ -19,5 +22,4 @@ Tailwind Components ->
 [Kitwind](https://kitwind.io/products/kometa/components)
 
 ## Other Resources
-Icon -> [FlatIcon](https://www.flaticon.com/)
-Product Photos -> [Freepic](https://www.freepik.com/)
+Icon -> [Hero Icon](https://heroicons.com/)
